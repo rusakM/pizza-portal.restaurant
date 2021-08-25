@@ -1,0 +1,10 @@
+.main-menu-card {
+  width: 300px;
+  height: 300px;
+  padding: 2em;
+  float: left;
+  cursor: pointer;
+  .main-menu-card-wrapper {
+    flex-direction: column;
+  }
+}

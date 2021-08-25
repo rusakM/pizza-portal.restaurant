@@ -6,7 +6,7 @@ import "./header.styles.scss";
 
 const Header = ({ history }) => (
   <header>
-    <div className="header-logo" onClick={() => history.push("/")}>
+    <div className="icon" onClick={() => history.push("/")}>
       <Pizza />
     </div>
     <HeaderItem link="/orders">Zamówienia</HeaderItem>

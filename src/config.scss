@@ -3,9 +3,4 @@ $theme-colors: (
   "danger": tomato,
 );
 
-.round-border {
-  border: 4px solid #f5c537;
-  border-radius: 1em;
-}
-
 @import "../node_modules/bootstrap/scss/bootstrap";
