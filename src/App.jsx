@@ -11,6 +11,7 @@ import Logout from "./components/logout/logout.component";
 
 import "./App.scss";
 import LandingPage from "./components/landing-page/landing-page.component";
+import OrderCreator from "./components/order-creator/order-creator.component";
 
 class App extends React.Component {
   constructor(props) {
@@ -74,6 +75,10 @@ class App extends React.Component {
             <Route
               path="/logout"
               component={() => <Logout logout={this.logoutUser} />}
+            />
+            <Route
+              path="/orders/create"
+              component={() => <OrderCreator history={this.props.history} />}
             />
           </Switch>
         </div>

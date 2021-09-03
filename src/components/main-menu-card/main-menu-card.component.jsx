@@ -1,10 +1,12 @@
 import React from "react";
 import "./main-menu-card.styles.scss";
 
-const MainMenuCard = ({ children, open }) => (
+const MainMenuCard = ({ children, open, additionalClasses }) => (
   <div className="main-menu-card">
     <div
-      className="wrapper round-border centered-content main-menu-card-wrapper"
+      className={`${
+        additionalClasses ?? ""
+      } wrapper round-border centered-content main-menu-card-wrapper`}
       onClick={open}
     >
       {children}
