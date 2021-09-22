@@ -12,6 +12,9 @@ import Logout from "./components/logout/logout.component";
 import "./App.scss";
 import LandingPage from "./components/landing-page/landing-page.component";
 import OrderCreator from "./components/order-creator/order-creator.component";
+import OrderViewer from "./components/order-viewer/order-viewer.component";
+import OrdersList from "./components/orders-list/orders-list.component";
+import MessagesList from "./components/messages-list/messages-list.component";
 
 class App extends React.Component {
   constructor(props) {
@@ -77,9 +80,24 @@ class App extends React.Component {
               component={() => <Logout logout={this.logoutUser} />}
             />
             <Route
+              path="/orders"
+              component={() => <OrdersList history={this.props.history} />}
+              exact
+            />
+            <Route
               path="/orders/create"
               component={() => <OrderCreator history={this.props.history} />}
             />
+            <Route
+              path="/orders/view/:id"
+              component={() => (
+                <OrderViewer
+                  history={this.props.history}
+                  currentUser={currentUser}
+                />
+              )}
+            />
+            <Route path="/messages" component={() => <MessagesList />} />
           </Switch>
         </div>
         <Footer />

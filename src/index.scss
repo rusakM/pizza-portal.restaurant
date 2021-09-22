@@ -40,6 +40,9 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  .btn {
+    white-space: nowrap;
+  }
   & > * {
     margin: 5px;
   }
