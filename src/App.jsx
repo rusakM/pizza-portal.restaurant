@@ -1,10 +1,12 @@
 import React from "react";
 import axios from "axios";
 import { withRouter, Redirect, Route, Switch } from "react-router";
+import io from "socket.io-client";
 import userStorageManager from "./utils/userStorageManager";
 
 import Header from "./components/header/header.component";
 import Footer from "./components/footer/footer.component";
+import Notifications from "./components/notifications/notifications.component";
 
 import LoginForm from "./components/login-form/login-form.component";
 import Logout from "./components/logout/logout.component";
@@ -15,6 +17,8 @@ import OrderCreator from "./components/order-creator/order-creator.component";
 import OrderViewer from "./components/order-viewer/order-viewer.component";
 import OrdersList from "./components/orders-list/orders-list.component";
 import MessagesList from "./components/messages-list/messages-list.component";
+
+const socket = io(`${window.location.protocol}//${window.location.hostname}`);
 
 class App extends React.Component {
   constructor(props) {
@@ -101,6 +105,7 @@ class App extends React.Component {
           </Switch>
         </div>
         <Footer />
+        <Notifications history={this.props.history} socket={socket} />
       </div>
     );
   }

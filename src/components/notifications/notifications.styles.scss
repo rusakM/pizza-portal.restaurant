@@ -1,0 +1,26 @@
+.notifications {
+  position: fixed;
+  width: 110px;
+  height: 215px;
+  right: 0.5em;
+  bottom: 100px;
+  background-color: transparent;
+  z-index: 5;
+  display: flex;
+  flex-direction: column-reverse;
+
+  .notifications-btn {
+    width: 100px;
+    height: 100px;
+    border: 4px solid #f5c537;
+    margin: 5px;
+    border-radius: 1em;
+    color: #f5c537;
+    background-color: white;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
