@@ -17,6 +17,7 @@ import OrderCreator from "./components/order-creator/order-creator.component";
 import OrderViewer from "./components/order-viewer/order-viewer.component";
 import OrdersList from "./components/orders-list/orders-list.component";
 import MessagesList from "./components/messages-list/messages-list.component";
+import Menu from "./components/menu/menu.component";
 
 const socket = io(`${window.location.protocol}//${window.location.hostname}`);
 
@@ -102,6 +103,10 @@ class App extends React.Component {
               )}
             />
             <Route path="/messages" component={() => <MessagesList />} />
+            <Route
+              path="/menu"
+              component={() => <Menu history={this.props.history} />}
+            />
           </Switch>
         </div>
         <Footer />
