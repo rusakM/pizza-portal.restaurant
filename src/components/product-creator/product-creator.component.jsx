@@ -2,7 +2,6 @@ import React, { createRef } from "react";
 import axios from "axios";
 import { Button, Form } from "react-bootstrap";
 import Alert from "../alert/alert.component";
-import formatPrice from "../../utils/formatPrice";
 
 import LISTS from "../menu/menu.lists";
 

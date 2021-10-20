@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 
 import MainMenuCard from "../main-menu-card/main-menu-card.component";
 import formatPrice from "../../utils/formatPrice";

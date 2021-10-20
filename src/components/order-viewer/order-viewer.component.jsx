@@ -57,10 +57,14 @@ class OrderViewer extends React.Component {
   updateOrder = async (data) => {
     const { orderId } = this.state;
     try {
-      const updateOrder = await axios({
+      await axios({
         method: "PATCH",
         url: `/api/bookings/${orderId}`,
         data,
+      });
+      const updateOrder = await axios({
+        method: "GET",
+        url: `/api/bookings/mapped-booking/${orderId}`,
       });
       this.setState({ orderData: updateOrder.data.data.data });
     } catch (error) {
